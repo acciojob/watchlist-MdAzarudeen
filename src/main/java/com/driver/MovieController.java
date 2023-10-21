@@ -28,11 +28,11 @@ public class MovieController {
     public String addMovieDirectorPair(@PathVariable ("movie")String movie, @PathVariable("director") String director)
     { return  movieService.addMovieDirectorPair(movie,director);  }
 
-    @GetMapping("/getMovie/{movie}")
+    @GetMapping("/getMovieByName/{movie}")
     public Movie getMovie(@PathVariable ("movie") String movie)
     { return movieService.getMovie(movie); }
 
-    @GetMapping("/getDirector/{director}")
+    @GetMapping("/getDirectorByName/{director}")
     public Director getDirector(@PathVariable("director") String director)
     { return movieService.getDirector(director); }
 
