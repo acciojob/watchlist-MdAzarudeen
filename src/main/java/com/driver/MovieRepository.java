@@ -36,8 +36,4 @@ public class MovieRepository {
         this.movieDirectorMap = movieDirectorMap;
     }
 
-    public Movie getMovieByName(String movie)
-    {
-        return movieMap.get(movie);
-    }
 }
