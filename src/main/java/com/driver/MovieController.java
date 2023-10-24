@@ -43,7 +43,7 @@ public class MovieController {
     { return new ResponseEntity<>(movieService.getMoviesByDirector(director), HttpStatus.OK); }
 
     @GetMapping("/findAllMovies")
-    public ResponseEntity<List<String>> findAllMovies()
+    public ResponseEntity<List> findAllMovies()
     { return new ResponseEntity<>(movieService.getMovies(), HttpStatus.OK); }
 //
     @GetMapping("/deleteDirectorByName/{director}")
