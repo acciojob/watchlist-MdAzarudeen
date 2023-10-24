@@ -31,7 +31,7 @@ public class MovieController {
 
     @GetMapping("/getMovieByName/{movie}")
     public Movie getMovie(@PathVariable ("movie") String movie)
-    { return movieService.getMovie(movie); }
+    { return movieService.getMovieByName(movie); }
 
     @GetMapping("/getDirectorByName/{director}")
     public Director getDirector(@PathVariable("director") String director)

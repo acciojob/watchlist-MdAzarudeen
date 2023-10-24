@@ -41,7 +41,7 @@ public class MovieService {
         return "Movie or Director is not in the database";
     }
 
-    public Movie getMovie(String movie)
+    public Movie getMovieByName(String movie)
     {
         return movieRepository.getMovieByName(movie);
     }
