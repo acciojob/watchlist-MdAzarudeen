@@ -50,7 +50,7 @@ public class MovieService {
     {
         return movieRepository.directorMap.get(director);
     }
-    public List getMoviesByDirector(String director) {
+    public List<String> getMoviesByDirector(String director) {
        List<String > moviesList = new ArrayList<>();
         Map<Integer,Pair> movieDirectorMap = movieRepository.getMovieDirectorMap();
         for (Pair pair: movieDirectorMap.values())
@@ -62,7 +62,7 @@ public class MovieService {
         return moviesList;
     }
 //
-    public List getMovies()
+    public List<String> getMovies()
     {
         List<String> moviesList = new ArrayList<>();
         Map<String,Movie> movieMap = movieRepository.getMovieMap();
