@@ -43,7 +43,7 @@ public class MovieService {
 
     public Movie getMovie(String movie)
     {
-        return movieRepository.movieMap.get(movie);
+        return movieRepository.getMovieByName(movie);
     }
 
     public Director getDirector(String director)

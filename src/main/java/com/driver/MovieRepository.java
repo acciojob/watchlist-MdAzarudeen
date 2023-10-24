@@ -35,4 +35,9 @@ public class MovieRepository {
     public void setMovieDirectorMap(Map<Integer, Pair> movieDirectorMap) {
         this.movieDirectorMap = movieDirectorMap;
     }
+
+    public Movie getMovieByName(String movie)
+    {
+        return movieMap.get(movie);
+    }
 }
