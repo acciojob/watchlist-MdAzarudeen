@@ -1,6 +1,7 @@
 package com.driver;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -41,7 +42,7 @@ public class MovieController {
     { return movieService.getMoviesByDirector(director); }
 
     @GetMapping("/findAllMovies")
-    public List getMovieNames()
+    public List<String> getMovieNames()
     { return movieService.getMovies(); }
 //
     @GetMapping("/deleteDirectorByName/{director}")
