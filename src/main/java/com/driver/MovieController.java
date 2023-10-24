@@ -34,15 +34,15 @@ public class MovieController {
     { return movieService.getMovieByName(movie); }
 
     @GetMapping("/getDirectorByName/{director}")
-    public Director getDirector(@PathVariable("director") String director)
+    public Director getDirectorByName(@PathVariable("director") String director)
     { return movieService.getDirector(director); }
 
     @GetMapping("/getMoviesByDirectorName/{director}")
-    public List getMovies(@PathVariable("director") String director)
+    public List getMoviesByDirectorName(@PathVariable("director") String director)
     { return movieService.getMoviesByDirector(director); }
 
     @GetMapping("/findAllMovies")
-    public List<String> getMovieNames()
+    public List<String> findAllMovies()
     { return movieService.getMovies(); }
 //
     @GetMapping("/deleteDirectorByName/{director}")
