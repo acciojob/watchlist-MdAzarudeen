@@ -94,7 +94,7 @@ public class MovieService {
             return "No such director exists";
     }
 
-    public String deleteAllDirectors() throws ConcurrentModificationException
+    public String deleteAllDirectors()
     {
         Map<Integer,Pair> movieDirectorMap = movieRepository.getMovieDirectorMap();
         Map<String,Director> directorMap = movieRepository.getDirectorMap();
