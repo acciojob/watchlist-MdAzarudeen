@@ -98,11 +98,14 @@ public class MovieService {
         Map<Integer,Pair> movieDirectorMap = movieRepository.getMovieDirectorMap();
         Map<String,Director> directorMap = movieRepository.getDirectorMap();
         Map<String,Movie> movieMap = movieRepository.getMovieMap();
+        for(Director director: directorMap.keySet())
+        {
+            directorMap.remove(director);
+        }
             for (int key : movieDirectorMap.keySet())
             {
                 Pair pair = movieDirectorMap.get(key);
                     movieDirectorMap.remove(key);
-                    directorMap.remove(pair.getDirector());
                     movieMap.remove(pair.getMovie());
             }
             return "All Director and their movies are deleted from database";
