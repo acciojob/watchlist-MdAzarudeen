@@ -79,11 +79,11 @@ public class MovieService {
         Map<String,Movie> movieMap = movieRepository.getMovieMap();
         if(directorMap.containsKey(director))
         {
+            directorMap.remove(director);
             for (int key : movieDirectorMap.keySet()) {
                 Pair pair = movieDirectorMap.get(key);
                 if (pair.getDirector().equals(director)) {
                     movieDirectorMap.remove(key);
-                    directorMap.remove(director);
                     movieMap.remove(pair.getMovie());
                 }
             }
