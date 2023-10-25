@@ -98,7 +98,7 @@ public class MovieService {
         Map<Integer,Pair> movieDirectorMap = movieRepository.getMovieDirectorMap();
         Map<String,Director> directorMap = movieRepository.getDirectorMap();
         Map<String,Movie> movieMap = movieRepository.getMovieMap();
-        for(Director director: directorMap.keySet())
+        for(String director: directorMap.keySet())
         {
             directorMap.remove(director);
         }
