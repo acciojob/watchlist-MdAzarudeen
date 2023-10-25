@@ -2,6 +2,7 @@ package com.driver;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import java.util.ConcurrentModificationException;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -93,15 +94,15 @@ public class MovieService {
             return "No such director exists";
     }
 
-    public String deleteAllDirectors()
+    public String deleteAllDirectors() throws ConcurrentModificationException
     {
         Map<Integer,Pair> movieDirectorMap = movieRepository.getMovieDirectorMap();
         Map<String,Director> directorMap = movieRepository.getDirectorMap();
         Map<String,Movie> movieMap = movieRepository.getMovieMap();
-//        for(String director: directorMap.keySet())
-//        {
-//            directorMap.remove(director);
-//        }
+        for(String director: directorMap.keySet())
+        {
+            directorMap.remove(director);
+        }
             for (int key : movieDirectorMap.keySet())
             {
                 Pair pair = movieDirectorMap.get(key);
